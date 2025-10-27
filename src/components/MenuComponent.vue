@@ -2,7 +2,7 @@
     <div>
         <h1>Menu</h1>
         <nav>
-            <ul>
+            <ul class="list">
             <li><router-link to="/">Home</router-link></li>
             <li><router-link to="/cine">Cine</router-link></li>
             <li><router-link to="/musica">Musica</router-link></li>
@@ -18,5 +18,13 @@ export default {
 </script>
 
 <style>
-
+    .list {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    li {
+        margin: 10px 5px;
+    }
 </style>

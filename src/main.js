@@ -2,6 +2,17 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './Routes'
 
-createApp(App)
+
+var app = createApp(App)
+app.config.globalProperties.$filters = {
+    mayuscula(data) {
+        return data.toUpperCase();
+    },
+    getNumeroDoble(numero){
+        return numero * 2;
+    }
+}
+
+app
 .use(router)
 .mount('#app')
